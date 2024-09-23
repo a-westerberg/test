@@ -10,13 +10,15 @@ public class Main {
         Triangel triangel = new Triangel(0,0);
 
     while(menuRunning) {
+        System.out.println();
         System.out.println("Meny för att räkna ut area på olika figurer!");
         System.out.println("1. Beräkna arean på rektangel");
         System.out.println("2. Beräkna arean på cirkel");
         System.out.println("3. Beräkna arean på triangel");
-        System.out.println("4. Avsluta programmet...");
+        System.out.println("4. Alla uträkningar");
+        System.out.println("5. Avsluta programmet...");
 
-        System.out.print("Välj ett val: ");
+        System.out.print("Välj ett alternativ: ");
         String menuSelection = scanner.nextLine();
 
 
@@ -49,25 +51,32 @@ public class Main {
                 scanner.nextLine();
                 System.out.print("Skriv in höjden på triangeln: ");
                 double triangelHeight = scanner.nextDouble();
+                scanner.nextLine();
                 triangel.setBas(triangelBase);
                 triangel.setHöjd(triangelHeight);
                 printLine();
                 triangel.areaResult();
                 printLine();
-
                 break;
             case "4":
-                System.out.println("Programmet avslutas...");
+                printLine();
+                rektangel.areaResult();
+                cirkel.areaResult();
+                triangel.areaResult();
+                printLine();
+                break;
+            case "5":
+
+                System.out.println("Tryck enter för att avsluta programmet.....");
+                scanner.nextLine();
                 menuRunning = false;
+                System.out.println("Programmet avslutas...");
                 break;
             default:
-                System.out.println("default <-------------------- något feltryck");
                 System.out.println();
-                System.out.println();
-                System.out.println();
-                System.out.println();
-                System.out.println("-----------------------------------------");
-                System.out.println("Ogiltigt Svar");
+                printLine();
+                System.out.println("Ogiltigt Svar försök igen!");
+                printLine();
                 break;
         }
 
@@ -75,9 +84,7 @@ public class Main {
 
 
 
-        rektangel.areaResult();
-        cirkel.areaResult();
-        triangel.areaResult();
+
 
 
 

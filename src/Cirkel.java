@@ -22,7 +22,7 @@ public class Cirkel implements AreaCalc{
 
     @Override
     public void areaResult() {
-        System.out.println("Arean för cirkeln är: " + calcArea());
+        System.out.println("Arean av cirkeln är: " + calcArea());
 
     }
 

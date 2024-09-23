@@ -14,7 +14,7 @@ public class Rektangel implements AreaCalc{
     }
 
     public void areaResult() {
-        System.out.println("Area för rektangeln är " + calcArea());
+        System.out.println("Arean av rektangeln är: " + calcArea());
     }
 
     public void setRektangelArea(double bredd, double höjd) {
